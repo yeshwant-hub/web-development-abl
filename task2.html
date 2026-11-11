@@ -1,0 +1,139 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Authentication Website</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background-color: lightblue;
+            text-align: center;
+        }
+
+        .container {
+            background-color: white;
+            width: 350px;
+            margin: 30px auto;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        h2 {
+            color: blue;
+        }
+
+        input {
+            width: 90%;
+            padding: 10px;
+            margin: 8px;
+            border: 1px solid gray;
+            border-radius: 5px;
+        }
+
+        input:focus {
+            border: 2px solid blue;
+            outline: none;
+        }
+
+        button {
+            background-color: blue;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: darkblue;
+        }
+
+        input:invalid:not(:placeholder-shown) {
+            border: 2px solid red;
+        }
+
+        label {
+            display: block;
+            text-align: left;
+            margin-left: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>User Authentication System</h1>
+
+    <!-- Registration Page -->
+    <div class="container">
+        <h2>Registration</h2>
+
+        <form>
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" placeholder="Enter Name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="Enter Email" required>
+
+            <label for="regpass">Password:</label>
+            <input type="password" id="regpass" placeholder="Enter Password"
+                   minlength="8" required>
+
+            <button type="submit">Register</button>
+        </form>
+    </div>
+
+    <!-- Login Page -->
+    <div class="container">
+        <h2>Login</h2>
+
+        <form>
+            <label for="loginemail">Email:</label>
+            <input type="email" id="loginemail" placeholder="Enter Email" required>
+
+            <label for="loginpass">Password:</label>
+            <input type="password" id="loginpass"
+                   placeholder="Enter Password" required>
+
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <!-- Password Recovery Page -->
+    <div class="container">
+        <h2>Password Recovery</h2>
+
+        <form>
+            <label for="recoveremail">Email:</label>
+            <input type="email" id="recoveremail"
+                   placeholder="Enter Registered Email" required>
+
+            <button type="submit">Reset Password</button>
+        </form>
+    </div>
+
+    <!-- Profile Setup Page -->
+    <div class="container">
+        <h2>Profile Setup</h2>
+
+        <form>
+            <label for="profile">Username:</label>
+            <input type="text" id="profile" placeholder="Enter Username" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" placeholder="Enter Phone Number"
+                   pattern="[0-9]{10}" required>
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" required>
+
+            <label for="address">Address:</label>
+            <input type="text" id="address" placeholder="Enter Address" required>
+
+            <button type="submit">Save Profile</button>
+        </form>
+    </div>
+
+</body>
+</html>
